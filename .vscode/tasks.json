@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "mkdir bin",
+		"type": "shell",
+		"command": "mkdir",
+		"args": ["-p", "${workspaceFolder}/bin"],
+		"problemMatcher": []
+	  },
+	  {
+		"type": "cppbuild",
+		"label": "build-project",
+		"command": "/usr/bin/g++",
+		"args": [
+		  "-fdiagnostics-color=always",
+		  "-g",
+		  "${workspaceFolder}/src/*.c",
+		  "-o",
+		  "${workspaceFolder}/bin/app"
+		],
+		"options": {
+		  "cwd": "${workspaceFolder}"
+		},
+		"dependsOn": ["mkdir bin"],
+		"problemMatcher": ["$gcc"],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"detail": "编译器: /usr/bin/g++"
+	  }
+	]
+  }
