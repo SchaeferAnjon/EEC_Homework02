@@ -1,8 +1,9 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-#define ARRAY_SIZE (1024 * 1024)  // 1MB
+#define ARRAY_SIZE (1024 * 1024)
 int array[ARRAY_SIZE];
 
 int main() {
@@ -17,8 +18,8 @@ int main() {
         }
         end = clock();
         double time_ms = 1000.0 * (end - start) / CLOCKS_PER_SEC;
-        printf("%lu\t%.3f\n", (unsigned long)(stride * sizeof(int)), time_ms);
+        printf("%d\t%.3f\n", stride * sizeof(int), time_ms);
     }
 
-    return sum; // use sum to prevent optimization
+    return sum;
 }

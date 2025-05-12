@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -6,7 +7,7 @@
 #define ARRAY_SIZE 1024 * 1024
 
 int main() {
-    char *array = (char *)malloc(ARRAY_SIZE);
+    char *array = malloc(ARRAY_SIZE);
     clock_t start, end;
 
     // Write access
